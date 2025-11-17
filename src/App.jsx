@@ -5,6 +5,8 @@ import Layout from './Components/Layout/Layout'
 import Home from './Pages/Home'
 import Details from './Pages/Details'
 
+import "./Styles/main.sass"
+
 
 const router = createBrowserRouter([
   { path: '/', element: <Intro /> },

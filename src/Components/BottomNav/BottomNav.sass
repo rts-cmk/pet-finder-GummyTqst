@@ -1,22 +1,47 @@
 @use "../../Styles/variables"
-@use "../../Styles/mixins"
     
 .bottom-nav
     position: fixed
-    bottom: 20px
-    left: 50%
-    transform: translateX(-50%)
-    width: 90%
-    padding: 12px 25px
+    bottom: 0
+    left: 0
+    right: 0
+    height: 80px
+    z-index: 1000
     display: flex
     justify-content: space-around
     align-items: center
-    border-radius: 25px
-
-    @include mixins.glass
-
-    a
+    padding-bottom: 12px
+    background-color: variables.$bg-light
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    box-shadow: 6px 6px 12px variables.$dark-shadow
+    
+    &__a
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        text-decoration: none
+        background-color: variables.$bg-button-light
         color: variables.$gray
-        &.active
-            color: variables.$primary
+
+        box-shadow: 6px 6px 12px variables.$dark-shadow, -6px -6px 12px variables.$light-shadow
+        transition: box-shadow 0.3s ease, color 0.3s ease
+
+        svg
+            width: 20px
+            height: 20px
+
+            path
+                stroke: currentColor
+        
+        &--active
+            box-shadow: inset 4px 4px 8px variables.$dark-shadow, inset -4px -4px 8px variables.$light-shadow
+
+            svg path
+                fill: variables.$primary
+                stroke: variables.$primary
+
     

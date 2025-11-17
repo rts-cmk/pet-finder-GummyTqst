@@ -7,22 +7,24 @@ import "../BottomNav/BottomNav.sass"
 
 export default function BottomNav() {
     return (
-        <nav className="bottom-nav">
-            <NavLink to="/home" end>
-                <IoHomeOutline />
-            </NavLink>
+        <div className="bottom-nav__nav-content">
+            <nav className="bottom-nav">
+                <NavLink to="/home" end className={({ isActive }) => `bottom-nav__a ${isActive ? "bottom-nav__a--active" : ""}`}>
+                    <IoHomeOutline />
+                </NavLink>
 
-            <NavLink to="/home" end>
-                <FiMessageCircle />
-            </NavLink>
+                <NavLink to="/message" end className={({ isActive }) => `bottom-nav__a ${isActive ? "bottom-nav__a--active" : ""}`}>
+                    <FiMessageCircle />
+                </NavLink>
 
-            <NavLink to="/favorites" end>
-                <FaRegHeart />
-            </NavLink>
+                <NavLink to="/favorites" end className={({ isActive }) => `bottom-nav__a ${isActive ? "bottom-nav__a--active" : ""}`}>
+                    <FaRegHeart />
+                </NavLink>
 
-            <NavLink to="/profile" end>
-                <IoPersonOutline />
-            </NavLink>
+                <NavLink to="/profile" end className={({ isActive }) => `bottom-nav__a ${isActive ? "bottom-nav__a--active" : ""}`}>
+                    <IoPersonOutline />
+                </NavLink>
         </nav>
+        </div>
     )
 }
