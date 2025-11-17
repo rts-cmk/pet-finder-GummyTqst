@@ -1,0 +1,8 @@
+@use "variables"
+
+@mixin glass 
+    background: variables.$glass-bg;
+    backdrop-filter: blur(variables.$glass-blur);
+    -webkit-backdrop-filter: blur(variables.$glass-blur);
+    border-radius: variables.$glass-radius;
+    box-shadow: variables.$glass-shadow;

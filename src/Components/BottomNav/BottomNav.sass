@@ -1,0 +1,22 @@
+@use "../../Styles/variables"
+@use "../../Styles/mixins"
+    
+.bottom-nav
+    position: fixed
+    bottom: 20px
+    left: 50%
+    transform: translateX(-50%)
+    width: 90%
+    padding: 12px 25px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    border-radius: 25px
+
+    @include mixins.glass
+
+    a
+        color: variables.$gray
+        &.active
+            color: variables.$primary
+    
