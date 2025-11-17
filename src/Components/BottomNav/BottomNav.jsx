@@ -8,19 +8,19 @@ import "../BottomNav/BottomNav.sass"
 export default function BottomNav() {
     return (
         <nav className="bottom-nav">
-            <NavLink to="/home">
+            <NavLink to="/home" end>
                 <IoHomeOutline />
             </NavLink>
 
-            <NavLink to="/home">
+            <NavLink to="/home" end>
                 <FiMessageCircle />
             </NavLink>
 
-            <NavLink to="/favorites">
+            <NavLink to="/favorites" end>
                 <FaRegHeart />
             </NavLink>
 
-            <NavLink to="/profile">
+            <NavLink to="/profile" end>
                 <IoPersonOutline />
             </NavLink>
         </nav>
