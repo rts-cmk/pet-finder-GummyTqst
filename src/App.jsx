@@ -6,6 +6,7 @@ import Home from './Pages/Home'
 import Details from './Pages/Details'
 
 import "./Styles/main.sass"
+import { petsLoader } from "./Loaders/petsLoaders"
 
 
 const router = createBrowserRouter([
@@ -15,8 +16,8 @@ const router = createBrowserRouter([
     path: '/home',
     element: <Layout />,
     children: [
-      { path: "", element: <Home /> },
-      { path: "dog/:id", element: <Details /> },
+      { path: "", element: <Home />, loader: petsLoader, },
+      { path: "details/:id", element: <Details /> },
     ]
   }
 ])
