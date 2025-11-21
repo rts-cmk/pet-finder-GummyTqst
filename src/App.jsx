@@ -7,6 +7,7 @@ import Details from './Pages/Details'
 
 import "./Styles/main.sass"
 import { petsLoader } from "./Loaders/petsLoaders"
+import { petDetailsLoader } from "./Loaders/petDetailsLoader"
 
 
 const router = createBrowserRouter([
@@ -16,8 +17,17 @@ const router = createBrowserRouter([
     path: '/home',
     element: <Layout />,
     children: [
-      { path: "", element: <Home />, loader: petsLoader, },
-      { path: "details/:id", element: <Details /> },
+      { 
+        path: "", 
+        element: <Home />, 
+        loader: petsLoader,
+        hydrateFallbackElement: <p>Loading pets...</p>,
+      },
+      { 
+        path: "details/:petId", 
+        element: <Details />,
+        loader: petDetailsLoader, 
+      },
     ]
   }
 ])
