@@ -1,0 +1,27 @@
+@use "../Styles/variables"
+    
+.intro-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 100vh
+
+    img
+        margin-bottom: 20px
+
+    &__info-text
+        text-align: center
+
+        p
+            color: variables.$gray2
+    
+    button
+        margin-top: 30px
+        width: 90%
+        padding: 10px 20px
+        color: variables.$light
+        background-color: variables.$primary
+        border: none
+        border-radius: 32px
+        cursor: pointer

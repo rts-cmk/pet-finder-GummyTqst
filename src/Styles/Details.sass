@@ -1,0 +1,79 @@
+// Variables (Optional, but good practice in SASS)
+$header-height: 300px;
+$main-color: #007bff;
+
+.details 
+    max-width: 500px;
+    height: 100vh
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+
+    &__header 
+        position: relative; 
+        height: $header-height;
+        z-index: 1; 
+
+    &__svg-background
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+    &__image 
+        position: absolute;
+        bottom: 0
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        z-index: 3; 
+
+    &__content 
+        position: relative;
+        z-index: 2;
+        height: 100%
+        background-color: white; 
+        padding: 20px; 
+        padding-top: 100px + 20px; 
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        
+        &__info 
+            text-align: center;
+            margin-bottom: 30px;
+        
+        
+        &__title 
+            font-size: 2em;
+            margin-bottom: 5px;
+        
+
+        &__location 
+            color: #777;
+        
+
+        &__description 
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: justify;
+        
+
+        &__button 
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: $main-color;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            
+            &:hover 
+                background-color: darken($main-color, 10%);
+        
+    
