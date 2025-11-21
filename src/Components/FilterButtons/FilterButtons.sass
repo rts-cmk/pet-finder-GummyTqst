@@ -1,3 +1,32 @@
 @use "../../Styles/variables"
+
+.filter-buttons
+    display: flex
+    gap: 10px 
+    padding: 0 20px 
+    overflow-x: scroll 
+
+    // Hide the scrollbar for aesthetics
+    &::-webkit-scrollbar
+        display: none
     
-.buttons
+    &__button
+        border: none
+        outline: none
+        cursor: pointer
+        
+        padding: 8px 16px
+        white-space: nowrap 
+
+        background: #f0f0f5
+        border-radius: 25px
+        box-shadow: 3px 3px 6px rgba(189, 189, 189, 0.7), -3px -3px 6px #ffffff
+
+        font-size: 14px
+        font-weight: 500
+        color: #333
+
+        &--active 
+            background: variables.$primary
+            color: white
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.6)

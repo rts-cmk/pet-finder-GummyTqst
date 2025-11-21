@@ -10,9 +10,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="filter-buttons-header">
-                <FilterButtons />
-            </div>
+            <FilterButtons />
             <div className="dog-list-container" style={{ paddingBottom: '100px' }}>
                 
                 {/* Check if the array is populated */}

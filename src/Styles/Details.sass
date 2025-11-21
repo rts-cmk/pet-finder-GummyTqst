@@ -1,6 +1,4 @@
-// Variables (Optional, but good practice in SASS)
-$header-height: 300px;
-$main-color: #007bff;
+@use '../Styles/variables'
 
 .details 
     max-width: 500px;
@@ -11,7 +9,7 @@ $main-color: #007bff;
 
     &__header 
         position: relative; 
-        height: $header-height;
+        height: 250px;
         z-index: 1; 
 
     &__svg-background
@@ -35,45 +33,48 @@ $main-color: #007bff;
         z-index: 2;
         height: 100%
         background-color: white; 
-        padding: 20px; 
-        padding-top: 100px + 20px; 
+        padding: 20px;  
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
 
         
-        &__info 
-            text-align: center;
-            margin-bottom: 30px;
+    &__content-header 
+        margin-bottom: 30px;
+    
+    &__info
+        margin-bottom: 15px
+        display: flex
+        gap: 4rem
+
+    &__breed,
+    &__gender
+        display: flex
+        align-items: center
+        gap: 0.5rem
         
-        
-        &__title 
-            font-size: 2em;
-            margin-bottom: 5px;
+    &__title 
+        font-size: 2em;
+        margin-bottom: 5px;
         
 
-        &__location 
-            color: #777;
+    &__location 
+        color: #777;
         
 
-        &__description 
-            line-height: 1.6;
-            margin-bottom: 30px;
-            text-align: justify;
+    &__description
+        line-height: 1.6
+        margin-bottom: 30px;
         
 
-        &__button 
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background-color: $main-color;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.2s;
-            
-            &:hover 
-                background-color: darken($main-color, 10%);
+    &__button 
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: variables.$primary;
+        color: white;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        font-weight: bold;
         
     
